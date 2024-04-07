@@ -4,20 +4,20 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>learning html</title>
-     
+     <link rel="stylesheet" href="sample.css">
       
       
 </head>
 <body>
       <main>
-            <h2>welcome to my world</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quae, placeat.</p> <hr>
+      <p id="paragraph"></p>
            
-      <button id="b1" class="button1" onclick="alert('added to bag')">add to bag</button> 
-      <button class="button2" onclick="alert('added to wishlist')">❤️whishlist</button>
+      <button id="b1" class="button1" onclick="quantity++; document.querySelector('#paragraph').innerText = 'Your bag has '+quantity+' item';">add to bag</button> 
+      <button class="button2" onclick="quantity--; document.querySelector('#paragraph').innerText = 'Your bag has '+quantity+' item';">❤️whishlist</button>
       </main>
       <script>
-           
+            let quantity = 0;
+           document.querySelector('#paragraph').innerText = 'Your bag has '+quantity+' item';
       </script>
 
 </body>
